@@ -55,7 +55,7 @@ class NaviActivity : AppCompatActivity() {
         }
 
         if (tag == TAG_POP) {
-            if (pop!=null){
+            if (pop != null){
                 fragTransaction.show(pop)
             }
         }

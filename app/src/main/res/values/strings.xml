@@ -5,4 +5,43 @@
     <string name="search">검색</string>
     <string name="home">홈</string>
     <string name="pop">인기</string>
+
+    <!-- Ran1king name -->
+    <string name="name_1">종근당건강 락토핏 코어맥스 10통 + 30포</string>
+    <string name="name_2">맥북프로 2021 16인치 M1 PRO 단독특가!</string>
+    <string name="name_3">샤오미 미에어 공기청정기 3H AC-M10-SC </string>
+
+
+    <!-- Ranking price  -->
+    <string name="price_1">169,000원</string>
+    <string name="price_2">3,000,000원</string>
+    <string name="price_3">150,000원</string>
+
+
+    <!-- HomeShopping name -->
+    <string name="shopping_1">롯데홈쇼핑</string>
+    <string name="shopping_2">GS홈쇼핑</string>
+    <string name="shopping_3">공영홈쇼핑</string>
+    <string name="shopping_4">현대홈쇼핑</string>
+
+
+    <!-- Ranking Drawer -->
+    <string name="ranking_drawer_header_title">홈쇼핑선택</string>
+
+    <!-- Search name -->
+    <string name="search_name_1">[쿠팡] 쿠팡 핫 아이템</string>
+    <string name="search_name_2">[냅킨공장] 칵테일 무지 냅킨 1박스, Brown, 3000매</string>
+    <string name="search_name_3">[농협] 상주 고당도 샤인머스켓, 1.5kg, 1팩</string>
+    <string name="search_name_4">[테팔] 비테스 인덕션 레인지 1구 자가설치, IH7228KR</string>
+    <string name="search_name_5">[보아르] 이지 접이식 전기포트 M1, VO-KI014</string>
+    <string name="search_name_6">[락앤락] 쿡플러스 하드앤라이트 프라이팬, 28cm, 1개</string>
+
+    <!-- Search price  -->
+    <string name="search_price_1">10,000원</string>
+    <string name="search_price_2">20,000원</string>
+    <string name="search_price_3">30,000원</string>
+    <string name="search_price_4">45,000원</string>
+    <string name="search_price_5">90,000원</string>
+    <string name="search_price_6">150,000원</string>
+
 </resources>

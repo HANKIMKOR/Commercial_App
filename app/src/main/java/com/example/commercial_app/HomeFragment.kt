@@ -4,14 +4,16 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.inflate
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class HomeFragment : Fragment() {
-    var profileAdapter: ProfileAdapter? = null
-    private val binding get() = profileAdapter!!
-    // lateinit var profileAdapter: ProfileAdapter
-    val datas = mutableListOf<ProfileData>()
+
+    private lateinit var rankingAdapter: RankingAdapter
+    private lateinit var recyclerView: RecyclerView
+    private var rankingArrayList = ArrayList<RankingData>()
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,38 +23,37 @@ class HomeFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        initRecycler()
+
+        val layoutManager = LinearLayoutManager(context)
+        recyclerView = view.findViewById(R.id.rv_ranking_view)
+        recyclerView.layoutManager = layoutManager
+        recyclerView.setHasFixedSize(true)
+        rankingAdapter = RankingAdapter(rankingArrayList)
+        recyclerView.adapter = rankingAdapter
+    }
+
     private fun initRecycler() {
-        profileAdapter = ProfileAdapter(this)
 
-
-
-        datas.apply {
-            add(ProfileData(img = R.drawable.ic_pop, name = "mary", age = 24))
-            add(ProfileData(img = R.drawable.ic_pop, name = "jenny", age = 26))
-            add(ProfileData(img = R.drawable.ic_pop, name = "jhon", age = 27))
-            add(ProfileData(img = R.drawable.ic_pop, name = "ruby", age = 21))
-            add(ProfileData(img = R.drawable.ic_pop, name = "yuna", age = 23))
-
-            profileAdapter.datas = datas
-            profileAdapter.notifyDataSetChanged()
-
-        }
-
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//
-//        binding = ProfileAdapter.inflate(layoutInflater)
-//        initRecycler()
-//    }
-//
-//    override fun onCreateView(
-//        inflater: LayoutInflater, container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View? {
-//        // Inflate the layout for this fragment
-//        return inflater.inflate(R.layout.fragment_home, container, false)
-//    }
-
-
+        rankingArrayList = arrayListOf(
+            RankingData(
+                img = R.drawable.product_img_01,
+                name = getString(R.string.name_1),
+                price = getString(R.string.price_1)
+            ),
+            RankingData(
+                img = R.drawable.product_img_02,
+                name = getString(R.string.name_2),
+                price = getString(R.string.price_2)
+            ),
+            RankingData(
+                img = R.drawable.product_img_03,
+                name = getString(R.string.name_3),
+                price = getString(R.string.price_3)
+            )
+        )
     }
 }
